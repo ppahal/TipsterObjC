@@ -8,7 +8,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
-
+@property (nonatomic) double tip1;
+@property (assign) double tip2;
+@property (assign) double tip3;
 @end
 
