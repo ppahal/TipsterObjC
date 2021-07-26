@@ -8,6 +8,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollviewBottomConstraint;
 @property (weak, nonatomic) IBOutlet UITextField *billField;
 @property (weak, nonatomic) IBOutlet UILabel *tipLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
@@ -23,34 +24,34 @@
     // Do any additional setup after loading the view.
     //Start w/ keyboard
     [self.billField becomeFirstResponder];
-    //CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
-    //[self.screenView setFrame:CGRectMake(self.screenView.frame.origin.x,screenHeight - self.screenView.frame.size.height - self.billField.frame.size.height, self.screenView.frame.size.width, self.screenView.frame.size.height)];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillAppear:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillDisappear:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)keyboardWillDisappear:(NSNotification *)notification{
+    [self.view layoutIfNeeded];
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.view layoutIfNeeded];
+        self.scrollviewBottomConstraint.constant = 0;
+        self.tipTotalView.alpha = 1;
+    }];
+}
+
+- (void)keyboardWillAppear:(NSNotification *) notification{
+    NSDictionary* keyboardInfo = [notification userInfo];
+    NSValue* keyboardFrameEnd = [keyboardInfo valueForKey:UIKeyboardFrameEndUserInfoKey];
+    CGRect keyboardFrameEndRect = [keyboardFrameEnd CGRectValue];
+    [self.view layoutIfNeeded];
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.view layoutIfNeeded];
+        self.scrollviewBottomConstraint.constant = keyboardFrameEndRect.size.height;
+        self.tipTotalView.alpha = 0;
+    }];
 }
 
 - (IBAction)onTap:(id)sender {
     [self.view endEditing:YES];
 }
-
-- (IBAction)onEditingBegan:(id)sender {
-    CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
-    self.tipControl.alpha = 0;
-    [UIView animateWithDuration:0.2 animations:^{
-        [self.screenView setFrame:CGRectMake(self.screenView.frame.origin.x,screenHeight - self.screenView.frame.size.height - self.billField.frame.size.height, self.screenView.frame.size.width, self.screenView.frame.size.height)];
-    }];
-    NSLog(@"EDIT");
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
-}
-- (IBAction)onEditingEnd:(id)sender {
-    //CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
-    self.tipControl.alpha = 1;
-    CGRect newFrame = self.screenView.frame;
-    newFrame.origin.y =  self.screenView.frame.size.height;
-    [UIView animateWithDuration:0.2 animations:^{
-        self.screenView.frame = newFrame;
-    }];
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
-}
-
 
 - (IBAction)onEdit:(id)sender {
     NSArray *percentages = @[@(0.15),@(0.18),@(0.20)];
