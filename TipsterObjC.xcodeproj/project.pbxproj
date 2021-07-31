@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		463107CB265729E900637A6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 463107CA265729E900637A6C /* AppDelegate.m */; };
 		463107CE265729E900637A6C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 463107CD265729E900637A6C /* SceneDelegate.m */; };
-		463107D1265729E900637A6C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463107D0265729E900637A6C /* ViewController.m */; };
 		463107D4265729E900637A6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 463107D2265729E900637A6C /* Main.storyboard */; };
 		463107D6265729ED00637A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 463107D5265729ED00637A6C /* Assets.xcassets */; };
 		463107D9265729ED00637A6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 463107D7265729ED00637A6C /* LaunchScreen.storyboard */; };
@@ -17,6 +16,7 @@
 		463107E6265729ED00637A6C /* TipsterObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 463107E5265729ED00637A6C /* TipsterObjCTests.m */; };
 		463107F1265729EE00637A6C /* TipsterObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 463107F0265729EE00637A6C /* TipsterObjCUITests.m */; };
 		463D1413266B4E710072B2D1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463D1412266B4E710072B2D1 /* SettingsViewController.m */; };
+		46651C7826AF558600075479 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46651C7726AF558600075479 /* CalculatorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +42,6 @@
 		463107CA265729E900637A6C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		463107CC265729E900637A6C /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		463107CD265729E900637A6C /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		463107CF265729E900637A6C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		463107D0265729E900637A6C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		463107D3265729E900637A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		463107D5265729ED00637A6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		463107D8265729ED00637A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +55,8 @@
 		463107F2265729EE00637A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		463D1411266B4E710072B2D1 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		463D1412266B4E710072B2D1 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		46651C7626AF558600075479 /* CalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
+		46651C7726AF558600075479 /* CalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,19 +107,16 @@
 		463107C8265729E900637A6C /* TipsterObjC */ = {
 			isa = PBXGroup;
 			children = (
+				46651C7526AF555900075479 /* Controller */,
 				463107C9265729E900637A6C /* AppDelegate.h */,
 				463107CA265729E900637A6C /* AppDelegate.m */,
 				463107CC265729E900637A6C /* SceneDelegate.h */,
 				463107CD265729E900637A6C /* SceneDelegate.m */,
-				463107CF265729E900637A6C /* ViewController.h */,
-				463107D0265729E900637A6C /* ViewController.m */,
 				463107D2265729E900637A6C /* Main.storyboard */,
 				463107D5265729ED00637A6C /* Assets.xcassets */,
 				463107D7265729ED00637A6C /* LaunchScreen.storyboard */,
 				463107DA265729ED00637A6C /* Info.plist */,
 				463107DB265729ED00637A6C /* main.m */,
-				463D1411266B4E710072B2D1 /* SettingsViewController.h */,
-				463D1412266B4E710072B2D1 /* SettingsViewController.m */,
 			);
 			path = TipsterObjC;
 			sourceTree = "<group>";
@@ -140,6 +137,17 @@
 				463107F2265729EE00637A6C /* Info.plist */,
 			);
 			path = TipsterObjCUITests;
+			sourceTree = "<group>";
+		};
+		46651C7526AF555900075479 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				463D1411266B4E710072B2D1 /* SettingsViewController.h */,
+				463D1412266B4E710072B2D1 /* SettingsViewController.m */,
+				46651C7626AF558600075479 /* CalculatorViewController.h */,
+				46651C7726AF558600075479 /* CalculatorViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				463107D1265729E900637A6C /* ViewController.m in Sources */,
 				463107CB265729E900637A6C /* AppDelegate.m in Sources */,
+				46651C7826AF558600075479 /* CalculatorViewController.m in Sources */,
 				463D1413266B4E710072B2D1 /* SettingsViewController.m in Sources */,
 				463107DC265729ED00637A6C /* main.m in Sources */,
 				463107CE265729E900637A6C /* SceneDelegate.m in Sources */,

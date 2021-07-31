@@ -9,10 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol SettingsDelegate
+-(void)updatePercentages:(NSArray *)percentages;
+@end
+
 @interface SettingsViewController : UIViewController
-@property (nonatomic, assign) double tip1;
-@property (nonatomic, assign) double tip2;
-@property (nonatomic, assign) double tip3;
+@property (strong, nonatomic) NSMutableArray *percentages;
+@property (nonatomic, weak) id<SettingsDelegate> delegate;
 @end
 
 NS_ASSUME_NONNULL_END
