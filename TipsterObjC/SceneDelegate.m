@@ -18,6 +18,15 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+    //Set User Defaults
+    //Access UserDefaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@[@(15),@(18),@(20)] forKey:@"percentages"];
+    [defaults setDouble:1.0 forKey:@"patrons"];
+    [defaults setDouble:0.00 forKey:@"bill"];
+    // Force UserDefaults to save.
+    [defaults synchronize];
 }
 
 

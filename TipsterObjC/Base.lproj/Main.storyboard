@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tips-->
+        <!--Tipster-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VM3-Mq-Qmc">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="547"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="546.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWg-SV-GH5">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="115.5"/>
@@ -35,10 +35,10 @@
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0t-WF-uF1">
-                                                <rect key="frame" x="0.0" y="327" width="414" height="130.5"/>
+                                                <rect key="frame" x="0.0" y="327" width="414" height="130"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueq-3E-NFe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                        <rect key="frame" x="4" y="0.0" width="60" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="ueq-3E-NFe" secondAttribute="height" multiplier="1:1" id="g56-O6-V9f"/>
                                                         </constraints>
@@ -46,8 +46,8 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ie-wb-F2g">
-                                                        <rect key="frame" x="60" y="0.0" width="354" height="70.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ie-wb-F2g">
+                                                        <rect key="frame" x="64" y="0.0" width="350" height="70"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="1ie-wb-F2g" secondAttribute="height" multiplier="5:1" id="lpN-u7-VLr"/>
                                                         </constraints>
@@ -55,8 +55,8 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B59-1N-Tpu">
-                                                        <rect key="frame" x="60" y="70.5" width="354" height="71"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B59-1N-Tpu">
+                                                        <rect key="frame" x="64" y="70" width="350" height="70"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="B59-1N-Tpu" secondAttribute="height" multiplier="5:1" id="wif-di-TBe"/>
                                                         </constraints>
@@ -65,7 +65,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdv-kQ-Jvz">
-                                                        <rect key="frame" x="0.0" y="70.5" width="60" height="60"/>
+                                                        <rect key="frame" x="4" y="70" width="60" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Pdv-kQ-Jvz" secondAttribute="height" multiplier="1:1" id="MLQ-Ql-nlA"/>
                                                         </constraints>
@@ -78,12 +78,12 @@
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="Pdv-kQ-Jvz" secondAttribute="bottom" id="8cs-QR-dRh"/>
                                                     <constraint firstItem="1ie-wb-F2g" firstAttribute="top" secondItem="ueq-3E-NFe" secondAttribute="top" id="8dd-Jb-jBD"/>
-                                                    <constraint firstItem="ueq-3E-NFe" firstAttribute="leading" secondItem="q0t-WF-uF1" secondAttribute="leading" id="DBl-Te-adq"/>
+                                                    <constraint firstItem="ueq-3E-NFe" firstAttribute="leading" secondItem="q0t-WF-uF1" secondAttribute="leading" constant="4" id="DBl-Te-adq"/>
                                                     <constraint firstItem="B59-1N-Tpu" firstAttribute="top" secondItem="Pdv-kQ-Jvz" secondAttribute="top" id="HaJ-TF-tgv"/>
                                                     <constraint firstItem="B59-1N-Tpu" firstAttribute="leading" secondItem="Pdv-kQ-Jvz" secondAttribute="trailing" id="Kjc-zT-jpU"/>
                                                     <constraint firstAttribute="trailing" secondItem="1ie-wb-F2g" secondAttribute="trailing" id="OAh-GH-x1o"/>
                                                     <constraint firstItem="Pdv-kQ-Jvz" firstAttribute="top" secondItem="1ie-wb-F2g" secondAttribute="bottom" id="Pht-5t-7UA"/>
-                                                    <constraint firstItem="Pdv-kQ-Jvz" firstAttribute="leading" secondItem="q0t-WF-uF1" secondAttribute="leading" id="VAt-0J-5bL"/>
+                                                    <constraint firstItem="Pdv-kQ-Jvz" firstAttribute="leading" secondItem="q0t-WF-uF1" secondAttribute="leading" constant="4" id="VAt-0J-5bL"/>
                                                     <constraint firstAttribute="trailing" secondItem="B59-1N-Tpu" secondAttribute="trailing" id="fSI-pL-ouQ"/>
                                                     <constraint firstItem="1ie-wb-F2g" firstAttribute="leading" secondItem="ueq-3E-NFe" secondAttribute="trailing" id="kko-Is-Ibf"/>
                                                     <constraint firstItem="ueq-3E-NFe" firstAttribute="top" secondItem="q0t-WF-uF1" secondAttribute="top" id="xzg-Mw-TpA"/>
@@ -105,7 +105,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5a-6U-Uao">
-                                                <rect key="frame" x="4" y="461.5" width="406" height="81.5"/>
+                                                <rect key="frame" x="4" y="461" width="406" height="81.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uE1-cs-5un">
                                                         <rect key="frame" x="8" y="8" width="82.5" height="27.5"/>
@@ -184,7 +184,7 @@
                             <constraint firstItem="omI-Zs-3xq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qee-JL-6sf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tips" id="jSV-yl-zqe">
+                    <navigationItem key="navigationItem" title="Tipster" id="jSV-yl-zqe">
                         <barButtonItem key="rightBarButtonItem" image="gearshape" catalog="system" id="TZ9-GV-6Ds">
                             <color key="tintColor" systemColor="systemIndigoColor"/>
                             <connections>
@@ -295,7 +295,7 @@
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SsW-Gn-uYf"/>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="EnR-Ov-rhG" firstAttribute="top" secondItem="3BD-Ll-cvF" secondAttribute="bottom" constant="20" id="6e9-e0-epA"/>
                             <constraint firstItem="3BD-Ll-cvF" firstAttribute="top" secondItem="SsW-Gn-uYf" secondAttribute="top" constant="30" id="7QB-Y2-fsC"/>
@@ -358,9 +358,6 @@
         <image name="person.3" catalog="system" width="128" height="62"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
