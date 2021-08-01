@@ -87,7 +87,7 @@
         //Set Dark Mode UI color scheme
         
         textColor = [UIColor colorWithRed: 0.40 green: 0.12 blue:0.40 alpha: 1.00];
-        mainFeaturesColor = [UIColor colorWithRed: 0.35 green: 0.35 blue:0.4 alpha: 1.00];
+        mainFeaturesColor = [UIColor colorWithRed: 0.35 green: 0.25 blue:0.4 alpha: 1.00];
         detailsColor = [UIColor colorWithRed: 0.25 green: 0.12 blue:0.25 alpha: 1.00];
         backgroundColor = [UIColor colorWithRed:0.08 green:0.0 blue:0.15 alpha:1];
         sliderDetailColor = [UIColor colorWithRed: 0.25 green: 0.12 blue:0.25 alpha: 1.00];
